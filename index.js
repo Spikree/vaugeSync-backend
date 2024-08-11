@@ -5,6 +5,7 @@ import login from './routes/login.js';
 import connectDb from './utils/databaseConnect.js';
 import getUserInfo from './routes/getUserInfo.js';
 import cors from 'cors'
+import changePassword from './routes/changePassword.js';
 
 
 
@@ -23,6 +24,7 @@ connectDb();
 app.use('/create-account',createAccount);
 app.use('/login',login);
 app.use('/get-user', getUserInfo);
+app.use('/change-password',changePassword);
 
 app.listen(port, () => {
     console.log(`server running from http://localhost:${port}`);
